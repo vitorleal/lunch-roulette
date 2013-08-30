@@ -1,0 +1,14 @@
+<section class="container">
+  <p class="text-right">Invite {{ friends.length }} of {{ friends.length }} friends</p>
+  <ul class="list-unstyled friend-list">
+    <li class="clearfix" ng-repeat="friend in friends">
+      <img src="{{ friend.thumb }}" class="img-circle" width="40" height="40">
+      <span> {{ friend.name }}</span>
+
+      <input type="checkbox" class="hide" ng-model="friend.invited">
+      <button type="button" class="btn btn-default pull-right">
+        <span class="glyphicon glyphicon-thumbs-down"></span>
+      </button>
+    </li>
+  </ul>
+</section>
