@@ -1,24 +1,17 @@
-(function() {
-  var lunchRoulette = angular.module('lunchRoulette', []).
-    config(function($routeProvider, $locationProvider) {
-      $routeProvider.
-        when('/', {
-          controller : FriendList,
-          templateUrl: 'public/templates/friendsList.html'
-        }).
-        otherwise({ redirectTo: '/' });
+'use strict';
 
-      $locationProvider.html5Mode(true);
-    });
+angular.module('lunchRoulette', [])
+  .config(function ($routeProvider, $locationProvider) {
+    $routeProvider
+      .when('/login', {
+        controller : 'Login',
+        templateUrl: 'public/view/log.html'
+      })
+      .when('/', {
+        controller : 'FriendList',
+        templateUrl: 'public/view/friendsList.html'
+      })
+      .otherwise({ redirectTo: '/' });
 
-  var FriendList = function($scope) {
-    $scope.friends = [
-      { name: 'David',   invited: false, thumb: 'http://placehold.it/40x40' },
-      { name: 'Erico',   invited: false, thumb: 'http://placehold.it/40x40' },
-      { name: 'Sheldon', invited: false, thumb: 'http://placehold.it/40x40' },
-      { name: 'João',    invited: false, thumb: 'http://placehold.it/40x40' },
-      { name: 'Fábio',   invited: false, thumb: 'http://placehold.it/40x40' },
-      { name: 'Marcos',  invited: false, thumb: 'http://placehold.it/40x40' }
-    ];
-  };
-})();
+    $locationProvider.html5Mode(true);
+  });
