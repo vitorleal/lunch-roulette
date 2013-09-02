@@ -1,5 +1,4 @@
 (function() {
-
   var lunchRoulette = angular.module('lunchRoulette', []).
     config(function($routeProvider, $locationProvider) {
       $routeProvider.
@@ -22,6 +21,4 @@
       { name: 'Marcos',  invited: false, thumb: 'http://placehold.it/40x40' }
     ];
   };
-
 })();
-

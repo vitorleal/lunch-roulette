@@ -1,14 +1,18 @@
 <section class="container">
-  <p class="text-right">Invite {{ friends.length }} of {{ friends.length }} friends</p>
+  <p class="text-right">Inviting {{ (friends | filter:{ invited: true }).length }} of
+    <ng-pluralize count="friends.length" when="{
+      '0'    : '0 frineds',
+      'one'  : '1 friend',
+      'other': '{} frinds'
+    }"></ng-pluralize>
+  </p>
+
   <ul class="list-unstyled friend-list">
     <li class="clearfix" ng-repeat="friend in friends">
       <img src="{{ friend.thumb }}" class="img-circle" width="40" height="40">
-      <span> {{ friend.name }}</span>
+      <span>{{ friend.name }} - {{ friend.invited }}</span>
 
-      <input type="checkbox" class="hide" ng-model="friend.invited">
-      <button type="button" class="btn btn-default pull-right">
-        <span class="glyphicon glyphicon-thumbs-down"></span>
-      </button>
+      <input type="checkbox" class="pull-right" ng-model="friend.invited">
     </li>
   </ul>
 </section>
