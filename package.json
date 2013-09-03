@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "express": "*",
-    "jade"   : "*"
+    "jade"   : "*",
+    "mongodb": "*"
   },
   "engines": {
     "node": "0.10.x",

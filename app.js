@@ -1,6 +1,7 @@
 var express = require("express"),
     http    = require("http"),
     path    = require("path"),
+    routes,
     app     = express();
 
 app.configure(function(){
@@ -9,8 +10,8 @@ app.configure(function(){
   app.use(express.favicon(__dirname + '/public/img/favicon.png'));
 });
 
-
-var routes = require("./routes/routes.js")(app);
+//Routes
+routes = require("./routes/routes.js")(app);
 
 // Create the server
 http.createServer(app).listen(app.get('port'), function() {
