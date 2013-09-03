@@ -1,3 +1,12 @@
+/* Logo */
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 26px;
+  margin: 0;
+  text-shadow: 2px -2px 1px #463243, -1px 2px 1px rgba(255, 255, 255, .3);
+}
+
+/* NavBar */
 .navbar-inverse {
   background-color: #563d7c;
   border-color: #463265;
@@ -12,6 +21,7 @@
   margin-top: 60px;
 }
 
+/* FriendsList */
 .friend-list {
   margin: 0;
   padding: 0;
@@ -19,4 +29,42 @@
 .friend-list li {
   padding: 10px;
   border-top: dotted 1px #e5e5e5;
+}
+
+/* LogForm */
+.login-form {
+  margin-top: 24px;
+}
+.login-form input {
+  margin-bottom: 12px;
+}
+
+
+/* Animation */
+.view-enter,
+.view-leave {
+  -webkit-transition: all cubic-bezier(0.250, 0.100, 0.250, 1.000) .5s;
+     -moz-transition: all cubic-bezier(0.250, 0.100, 0.250, 1.000) .5s;
+       -o-transition: all cubic-bezier(0.250, 0.100, 0.250, 1.000) .5s;
+          transition: all cubic-bezier(0.250, 0.100, 0.250, 1.000) .5s;
+}
+
+.view-enter {
+  position: absolute;
+  left: 100%;
+  height: 100%;
+}
+.view-enter.view-enter-active {
+  position: relative;
+  left: 0;
+}
+
+.view-leave {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+.view-leave.view-leave-active {
+  position: absolute;
+  left: -100%;
 }

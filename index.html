@@ -11,26 +11,27 @@
 
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/style.css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
     <script src='public/js/vendor/angular.min.js'></script>
-    <script src="http://connect.facebook.net/en_US/all.js"></script>
-
   </head>
 
   <body ng-app="lunchRoulette">
     <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
       <div class="container">
         <div class="navbar-header">
-          <div class="navbar-brand">Lunch Roulette</div>
+          <h1 class="navbar-brand logo">Lunch Roulette</h1>
         </div>
       </div>
     </header>
 
-    <div class="main-view" ng-view></div>
+    <div class="main-view" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
+
+
+    <script src='public/js/modules/angular-cookies.min.js'></script>
 
     <script src='public/js/app.js'></script>
 
-    <script src='public/js/modules/angular-cookies.min.js'></script>
     <script src='public/js/controllers/login.js'></script>
     <script src='public/js/controllers/friendsList.js'></script>
   </body>
