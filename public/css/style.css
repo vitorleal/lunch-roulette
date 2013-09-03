@@ -30,6 +30,9 @@
   padding: 10px;
   border-top: dotted 1px #e5e5e5;
 }
+.friend-list .thumb {
+  margin-right: 12px;
+}
 
 /* LogForm */
 .login-form {

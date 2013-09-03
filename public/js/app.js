@@ -5,12 +5,12 @@ var app = angular.module('lunchRoulette', ['ngCookies'])
     $routeProvider
       .when('/', {
         controller : 'Login',
-        templateUrl: 'public/view/login.html',
+        templateUrl: '/view/login.html',
         isPublic   : true
       })
       .when('/friends', {
         controller : 'FriendList',
-        templateUrl: 'public/view/friendsList.html',
+        templateUrl: '/view/friendsList.html',
         isPublic   : false
       })
       .otherwise({ redirectTo: '/' });

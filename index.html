@@ -7,32 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/style.css" media="all">
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
 
-    <script src='public/js/vendor/angular.min.js'></script>
+    <script src="/js/vendor/angular.min.js"></script>
   </head>
 
   <body ng-app="lunchRoulette">
-    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <h1 class="navbar-brand logo">Lunch Roulette</h1>
-        </div>
-      </div>
-    </header>
-
+    <div ng-include src="'/view/common/header.html'"></div>
     <div class="main-view" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
 
 
-    <script src='public/js/modules/angular-cookies.min.js'></script>
+    <script src='/js/modules/angular-cookies.min.js'></script>
 
-    <script src='public/js/app.js'></script>
+    <script src='/js/app.js'></script>
 
-    <script src='public/js/controllers/login.js'></script>
-    <script src='public/js/controllers/friendsList.js'></script>
+    <script src='/js/controllers/login.js'></script>
+    <script src='/js/controllers/friendsList.js'></script>
   </body>
 </html>

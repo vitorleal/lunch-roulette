@@ -9,10 +9,13 @@
 
   <ul class="list-unstyled friend-list">
     <li class="clearfix" ng-repeat="friend in friends">
-      <img src="{{ friend.thumb }}" class="img-circle" width="40" height="40">
+      <img src="{{ friend.thumb }}" class="img-circle thumb" width="50" height="50">
       <span>{{ friend.name }} - {{ friend.invited }}</span>
 
-      <input type="checkbox" class="pull-right" ng-model="friend.invited">
+      <label>
+        <span class="glyphicon glyphicon-thumbs-down"></span>
+        <input type="checkbox" class="hide pull-right" ng-model="friend.invited">
+      <label>
     </li>
   </ul>
 </section>
