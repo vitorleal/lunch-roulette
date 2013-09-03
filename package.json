@@ -1,0 +1,22 @@
+{
+  "name": "lunch-roulette",
+  "version": "0.0.1",
+  "description": "Lunch Roulette App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test" : "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitorleal/lunch-roulette.git"
+  },
+  "keywords": [
+    "lunch"
+  ],
+  "author": "Vitor Leal",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/vitorleal/lunch-roulette/issues"
+  }
+}
