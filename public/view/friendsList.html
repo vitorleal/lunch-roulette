@@ -1,21 +1,16 @@
 <section class="container">
-  <p class="text-right">Inviting {{ (friends | filter:{ invited: true }).length }} of
-    <ng-pluralize count="friends.length" when="{
-      '0'    : '0 frineds',
-      'one'  : '1 friend',
-      'other': '{} frinds'
-    }"></ng-pluralize>
-  </p>
-
   <ul class="list-unstyled friend-list">
     <li class="clearfix" ng-repeat="friend in friends">
       <img src="{{ friend.thumb }}" class="img-circle thumb" width="50" height="50">
-      <span>{{ friend.name }} - {{ friend.invited }}</span>
+      <strong>{{ friend.name }}</strong>
 
-      <label>
-        <span class="glyphicon glyphicon-thumbs-down"></span>
-        <input type="checkbox" class="hide pull-right" ng-model="friend.invited">
+      <label class="pull-right">
+        <span class="invite-friend icon icon-thumbs-down" ng-show="friend.invited === false"></span>
+        <span class="invite-friend icon icon-thumbs-up"   ng-show="friend.invited === true"></span>
+        <input type="checkbox" class="hide pull-right"    ng-model="friend.invited">
       <label>
     </li>
   </ul>
 </section>
+
+<div ng-include src="'view/common/footer-next.html'"></div>

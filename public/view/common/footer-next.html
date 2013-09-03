@@ -1,0 +1,15 @@
+<footer class="fixed-footer" ng-show="(friends | filter:{ invited: true }).length >= 1" ng-animate="{show: 'show-animate', hide: 'hide-animate'}">
+  <div class="container">
+    <p class="summary-text pull-left">Inviting <strong>{{ (friends | filter:{ invited: true }).length }}</strong> of
+      <ng-pluralize count="friends.length" when="{
+        '0'    : '0 frineds',
+        'one'  : '1 friend',
+        'other': '{} frinds'
+      }"></ng-pluralize>
+    </p>
+
+    <a class="next-step pull-right" ng-href="{{ nextLink }}">
+      Next <span class="icon icon-arrow-right-thick"></span>
+    </a>
+  </div>
+</footer>

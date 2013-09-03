@@ -13,6 +13,11 @@ var app = angular.module('lunchRoulette', ['ngCookies'])
         templateUrl: '/view/friendsList.html',
         isPublic   : false
       })
+      .when('/roulette', {
+        controller : 'Roulette',
+        templateUrl: '/view/roulette.html',
+        isPublic   : false
+      })
       .otherwise({ redirectTo: '/' });
 
     $locationProvider.html5Mode(true);
