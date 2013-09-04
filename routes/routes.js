@@ -1,8 +1,4 @@
-var mongo   = require('mongodb'),
-    Server  = mongo.Server,
-    Db      = mongo.Db,
-    server  = new Server('ds043378.mongolab.com', 43378, { auto_reconnect: true }),
-    db      = new Db('lunch-roulette', server);
+var db = require('../helper/database.js');
 
 module.exports = function (app) {
   var index = 'index.html';
